@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class BookShopSmallTests {
 
-    // 1 test scurt cu 1 assert
     @Test
     public void empty_basket_should_have_price_of_zero() {
         Basket emptyBasket = new Basket();
@@ -12,7 +11,6 @@ public class BookShopSmallTests {
         assertEquals(price, 0);
     }
 
-    // 1 test mare care face prea multe, cu doua asserturi, fara legatura
     @Test
     public void test_empty_basket() {
         Basket emptyBasket = new Basket();
@@ -22,7 +20,6 @@ public class BookShopSmallTests {
         assertEquals(numberOfItems, 0);
     }
 
-    // 1 assert dar tot e prea mult, test de sistem, de componenta
     @Test
     public void empty_basket_widget_should_display_price_of_zero() {
         BasketWidget basketWidget = new BasketWidget();
@@ -32,7 +29,6 @@ public class BookShopSmallTests {
         assertEquals(price, 0);
     }
 
-    // 1 test mare cu scroll, mai mult de un ecran, cod, assert, cod, assert
     @Test
     public void basket_with_seven_books_should_cost_100_euros() {
         Basket basket = new Basket(
