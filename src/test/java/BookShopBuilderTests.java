@@ -91,7 +91,9 @@ public class BookShopBuilderTests {
 
     @Test
     public void basket_with_a_list_of_seven_default_books_should_cost_100_euros() {
-        Basket basket = basketWithSevenBooks();
+        Basket basket = new Basket(
+                new BookBuilder().listOfBooks(7)
+        );
         double price = basket.price();
         assertEquals(price, 100);
     }
@@ -123,7 +125,6 @@ public class BookShopBuilderTests {
             "6, 90",
             "7, 100",
     })
-
     public void basket_with_books_should_cost_euros(int numberOfBooks, double expectedPrice) {
         Basket basket = basketWithBooks(numberOfBooks);
         double actualPrice = basket.price();
